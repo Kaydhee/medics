@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --light-gray: #dfdbdb;
+
+  --white-color: #fff;
+  --black-color: #000;
+  --off-white: #f4fcff;
+  --linen-white: #e6d7c1;
+
+  --spring-green: #00ff7f;
+  --sea-green: #2e8b57;
+  --jade-green: #00a36c;
+  --cadmium-green: #097969;
+
+  --primary-color: #0d5d56;
+  --primary-color-variant: #b6e9c7;
+  --primary-color-2: #c6ecd3;
+
+  --bd-radius-1: 8px;
+  --bd-radius-2: 4px;
+
+  --container-width-lg: 88%;
+  --container-width-md: 92%;
+
+  --transition: all 400ms ease-in-out;
+}
+
+/* CONSULT PAGE STYLES */
+.consult__header {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../images/consult-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  max-width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.text__box {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+  background: transparent;
+}
+
+.text__box h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: var(--white-color);
+}
+/* END OF CONSULT PAGE STYLES */
+
+/* BOOKINGS SECTION STYLES */
+.bookings {
+  margin: 0 auto;
+  background: var(--white-color);
+}
+
+.bookings__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3% 0;
+}
+
+.bookings__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background: var(--primary-color);
+  padding: 2rem 3rem;
+  height: 26rem;
+  width: 40rem;
+  border-radius: var(--bd-radius-1);
+}
+
+.bookings__form label {
+  color: var(--white-color);
+  font-size: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.bookings__form input,
+.bookings__form select {
+  padding: 1rem;
+  height: 2rem;
+  width: 100%;
+  border-radius: var(--bd-radius-2);
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.bookings__btn {
+  background: var(--white-color);
+  color: var(--primary-color);
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.bookings__output {
+  width: 30rem;
+  background: var(--primary-color);
+  padding: 2rem;
+  border-radius: var(--bd-radius-1);
+}
+
+.bookings__output p {
+  font-size: 0.9rem;
+  margin-bottom: 0.7rem;
+  color: var(--white-color);
+}
+
+.output__btn {
+  background: var(--white-color);
+  color: var(--primary-color);
+  margin-top: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+/* END OF BOOKINGS SECTION STYLES */

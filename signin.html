@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medics.com - Sign In</title>
+    <!-- CUSTOM CSS LINK -->
+    <link rel="stylesheet" href="./styles/form-styles.css" />
+  </head>
+  <body>
+    <section class="sign__in-section">
+      <div class="container sign__in-container" id="sign-in-container">
+        <div class="sign__in-box">
+          <form class="form sign__in-form" id="sign-in-form">
+            <h2>Sign In</h2>
+            <div class="input__box">
+              <input type="text" id="username" required />
+              <span>Username</span>
+              <i></i>
+            </div>
+
+            <div class="input__box">
+              <input type="password" id="password" required />
+              <span>password</span>
+              <i></i>
+            </div>
+
+            <div class="links">
+              <a href="#">Forgot password?</a>
+              <a href="signup.html">Sign Up</a>
+            </div>
+
+            <button class="btn sign__in-btn" id="sign-in-btn" type="submit">
+              Sign In
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- CUSTOM JAVASCRIPT LINK -->
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/signIn.js"></script>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medics.com - Consult</title>
+    <!-- CUSTOM CSS LINK -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/consult.css" />
+  </head>
+  <body>
+    <nav class="navbar consult__navbar" id="navbar">
+      <div class="container nav__container">
+        <h2 class="logo">Medics</h2>
+        <ul class="nav__items">
+          <li><a href="index.html">home</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Consultations</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+
+        <img
+          class="nav__toggle-btn"
+          id="nav__toggle-open"
+          src="./images/icon-hamburger.svg"
+          alt=""
+        />
+        <img
+          class="nav__toggle-btn"
+          id="nav__toggle-close"
+          src="./images/icon-close.svg"
+          alt=""
+        />
+
+        <div class="nav__btn-con">
+          <a href="signin.html" class="btn nav__btn">Sign In</a>
+          <a href="signup.html" class="btn nav__btn">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+    <!-- HEADER SECTION -->
+    <header class="header consult__header" id="consult-header">
+      <div class="container header__container consult__container">
+        <div class="text__box">
+          <h1 id="consult-h1">Welcome Mr John</h1>
+        </div>
+      </div>
+    </header>
+    <!-- END OF HEADER SECTION -->
+
+    <section class="bookings">
+      <div class="container bookings__container">
+        <form class="bookings__form" id="bookings-form">
+          <label for="name">Name</label>
+          <input type="text" class="name" id="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" class="email" id="email" required />
+
+          <label for="date">Pick a date</label>
+          <input type="date" class="date" id="date" required />
+
+          <label for="time">Session Time</label>
+          <input type="time" class="time" id="time" required />
+
+          <label for="package">Select Your Package</label>
+          <select class="package" id="packages">
+            <option selected>Check Up</option>
+            <option>Surgery</option>
+            <option>Therapy</option>
+          </select>
+
+          <button class="bookings__btn btn" id="bookings-btn">Confirm</button>
+        </form>
+
+        <div class="bookings__output hidden">
+          <p class="name__ouput output" id="name-output">Output:</p>
+          <p class="email__output output" id="email-output">Output:</p>
+          <p class="date__output output" id="date-output">Output:</p>
+          <p class="time__output output" id="time-output">Output:</p>
+          <p class="package__output output" id="package-output">Output:</p>
+
+          <button class="output__btn btn" id="output-btn">
+            confirm booking
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="container footer__container">
+        <div class="footer__contents">
+          <h4 class="logo">Medics</h4>
+          <p>
+            The ultimate destination for<br />
+            all your medical needs
+          </p>
+          <div class="footer__links">
+            <img src="./images/icon-facebook.svg" alt="icon-facebook" />
+            <img src="./images/icon-twitter.svg" alt="icon-twitter" />
+            <img src="./images/icon-instagram.svg" alt="icon-instagram" />
+          </div>
+        </div>
+        <div class="footer__contents">
+          <h4>Explore</h4>
+          <ul>
+            <li>Home</li>
+            <li>Registration</li>
+            <li>Consultations</li>
+            <li>Surgery</li>
+            <li>Our Values</li>
+          </ul>
+        </div>
+        <div class="footer__contents">
+          <h4>About Us</h4>
+          <ul>
+            <li>Who We Are</li>
+            <li>Our Vision</li>
+            <li>Our Team</li>
+            <li>Terms and Conditions</li>
+            <li>FAQ</li>
+          </ul>
+        </div>
+        <div class="footer__contents">
+          <h4>Contact</h4>
+          <ul>
+            <li>+2348125875061</li>
+            <li>medics@gmail.com</li>
+            <li>21 Ikpa Lane, Uyo.</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- END OF FOOTER SECTION -->
+
+    <!-- CUSTOM JAVASCRIPT LINK -->
+    <!-- <script src="./scripts/main.js"></script>
+    <script src="./scripts/signIn.js"></script> -->
+    <script src="./scripts/consult.js"></script>
+  </body>
+</html>

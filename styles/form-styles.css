@@ -1,0 +1,233 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --black-color: #000;
+  --dark-bg-color: #23242a;
+  --darker-bg-color: #1c1c1c;
+  --darkest-bg-color: #28292d;
+  --deep-gray: #8f8f8f;
+
+  --white-color: #fff;
+  --off-white: #f4fcff;
+  --linen-white: #e6d7c1;
+
+  --spring-green: #00ff7f;
+  --sea-green: #7ac0b7;
+  --jade-green: #00a36c;
+  --cadmium-green: #097969;
+
+  --primary-color: #0d5d56;
+  --primary-color-variant: #b6e9c7;
+
+  --bd-radius-1: 8px;
+  --bd-radius-2: 4px;
+
+  --container-width-lg: 88%;
+  --container-width-md: 92%;
+
+  --transition: all 400ms ease-in-out;
+}
+
+/* SIGN IN / SIGN UP FORMS STYLES */
+
+.sign__in-section,
+.sign__up-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: var(--primary-color-variant); */
+  background-color: var(--sea-green);
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.sign__in-box,
+.sign__up-box {
+  position: relative;
+  width: 42rem;
+  height: 30rem;
+  background: var(--primary-color);
+  border-radius: var(--bd-radius-1);
+  overflow: hidden;
+}
+
+.sign__up-box {
+  height: 40rem;
+}
+
+.sign__in-box::before,
+.sign__up-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 42rem;
+  height: 30rem;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    var(--white-color),
+    var(--white-color)
+  );
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.sign__up-box::before {
+  height: 40rem;
+}
+
+.sign__in-box::after,
+.sign__up-box::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 42rem;
+  height: 30rem;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    var(--white-color),
+    var(--white-color)
+  );
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+
+.sign__up-box::after {
+  height: 40rem;
+}
+
+.form {
+  position: absolute;
+  inset: 2px;
+  border-radius: var(--bd-radius-1);
+  background: var(--primary-color);
+  z-index: 10;
+  padding: 5rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign__up-form {
+  padding: 2rem 4rem;
+}
+
+.form h2 {
+  color: var(--white-color);
+  font-weight: 500;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.input__box {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.input__box input {
+  position: relative;
+  width: 100%;
+  padding: 2rem 1rem 1rem;
+  background: transparent;
+  color: var(--black-color);
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
+  z-index: 10;
+}
+
+.input__box span {
+  position: absolute;
+  left: 0;
+  padding: 2rem 0rem 1rem;
+  font-size: 1rem;
+  color: var(--white-color);
+  pointer-events: none;
+  letter-spacing: 0.05rem;
+  transition: 0.5s;
+}
+
+.input__box input:valid ~ span,
+.input__box input:focus ~ span {
+  color: var(--white-color);
+  transform: translateX(0) translateY(-2.4rem);
+  font-size: 0.75rem;
+}
+
+.input__box i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--white-color);
+  border-radius: var(--bd-radius-2);
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.input__box input:valid ~ i,
+.input__box input:focus ~ i {
+  height: 3rem;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links a {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: var(--white-color);
+}
+
+.links a:hover,
+.links a:nth-child(2) {
+  color: var(--white-color);
+  font-weight: 600;
+}
+
+.sign__in-btn,
+.sign__up-btn {
+  background: var(--white-color);
+  padding: 11px 25px;
+  width: 120px;
+  margin-top: 1rem;
+  border-radius: var(--bd-radius-2);
+  font-weight: 600;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.sign__in-btn:active {
+  opacity: 0.8;
+}
+/* END OF SIGN IN / SIGN UP FORMS STYLES */
+
+/* ANIMATIONS */
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
