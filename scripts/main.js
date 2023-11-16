@@ -1,63 +1,64 @@
-"use strict";
+'use strict';
 
 // ASSIGNING BUTTONS
-const signInBtn = document.querySelector(".sign__in-btn");
-const signUpBtn = document.querySelector(".sign__up-btn");
-const signInForm = document.querySelector("#sign-in-form");
+const signInBtn = document.querySelector('.sign__in-btn');
+const signUpBtn = document.getElementById('sign-up-btn');
+
+console.log(signUpBtn);
 
 // CREATING USER PROFILE (IN LOCAL STORAGE).
-let arr = localStorage.getItem("userData");
+let arr = localStorage.getItem('userData');
 
 if (!arr) {
-  let userData = [];
-  localStorage.setItem("userData", JSON.stringify(userData));
+	let userData = [];
+	localStorage.setItem('userData', JSON.stringify(userData));
 }
 
 function submitAction(e) {
-  e.preventDefault();
+	e.preventDefault();
 
-  const userName = document.querySelector("#username").value;
+	const userName = document.querySelector('#username').value;
 
-  const userEmail = document.querySelector("#email").value;
+	const userEmail = document.querySelector('#email').value;
 
-  const userNumber = document.querySelector("#tel").value;
+	const userNumber = document.querySelector('#tel').value;
 
-  const userPassword = document.querySelector("#password").value;
+	const userPassword = document.querySelector('#password').value;
 
-  let newUserData = {
-    userName,
-    userEmail,
-    userNumber,
-    userPassword,
-  };
+	let newUserData = {
+		userName,
+		userEmail,
+		userNumber,
+		userPassword,
+	};
 
-  let userArr = JSON.parse(localStorage.getItem("userData"));
-  userArr.push(newUserData);
+	let userArr = JSON.parse(localStorage.getItem('userData'));
+	userArr.push(newUserData);
 
-  localStorage.setItem("userData", JSON.stringify(userArr));
-  window.location.href = "index.html";
+	localStorage.setItem('userData', JSON.stringify(userArr));
+	window.location.href = 'signIn.html';
 }
 
-// signUpBtn.addEventListener("click", submitAction);
+signUpBtn.addEventListener('click', submitAction);
 
 // Revealing Section on Scroll
-const allSections = document.querySelectorAll(".section");
+const allSections = document.querySelectorAll('.section');
 
 const revealSection = function (entries, observer) {
-  const [entry] = entries;
+	const [entry] = entries;
 
-  if (!entry.isIntersecting) return;
-  entry.target.classList.remove("section__hidden");
-  // unobserving
-  observer.unobserve(entry.target);
+	if (!entry.isIntersecting) return;
+	entry.target.classList.remove('section__hidden');
+	// unobserving
+	observer.unobserve(entry.target);
 };
 
 const sectionObserver = new IntersectionObserver(revealSection, {
-  root: null,
-  threshold: 0.15,
+	root: null,
+	threshold: 0.15,
 });
 
 allSections.forEach(function (section) {
-  sectionObserver.observe(section);
-  section.classList.add("section__hidden");
+	sectionObserver.observe(section);
+	section.classList.add('section__hidden');
 });
