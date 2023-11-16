@@ -24,6 +24,7 @@ signInForm.addEventListener('submit', (e) => {
 	if (!findUser) {
 		alert('Either your password or username is Incorrect');
 		window.location.href = 'signin.html';
+		return;
 	}
 	// console.log(findUser);
 });
